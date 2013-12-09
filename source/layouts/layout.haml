@@ -6,7 +6,51 @@
     %title
       = current_page.data.title || "The Middleman"
     
-    = stylesheet_link_tag "normalize", "all"
+    %link{href: "http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,800italic,400,600,800", rel: "stylesheet", type: "text/css"}/
+    = stylesheet_link_tag "all"
     = javascript_include_tag  "all"
   %body
-    = yield
+    .wrapper
+      %header#header
+        %h1#site-logo
+          %a{href: "./index.html"}
+            %img{alt: "Site Logo", src: "/images/logos/logo.png"}/
+        %a#top-bar-toggle.navbar-toggle.collapsed{"data-target" => ".top-bar-collapse", "data-toggle" => "collapse", href: "javascript:;"}
+          %i.icon-cog
+        %a#sidebar-toggle.navbar-toggle.collapsed{"data-target" => ".sidebar-collapse", "data-toggle" => "collapse", href: "javascript:;"}
+          %i.icon-reorder
+      #search
+        %form
+          %input.form-control.input-sm{name: "search", placeholder: "Search...", type: "text"}/
+          %button#search-btn.btn{type: "submit"}
+            %i.icon-search
+      %nav#sidebar
+        %ul#main-nav.open-active
+          %li
+            %a{href: "./index.html"}
+              %i.fa.fa-dashboard
+              Dashboard
+          %li.dropdown
+            %a{href: "javascript:;"}
+              %i.icon-file-text
+              Example Pages
+              %span.caret
+            %ul.sub-nav
+              %li
+                %a{href: "./page-profile.html"}
+                  %i.icon-user
+                  Profile
+              %li
+                %a{href: "./page-invoice.html"}
+                  %i.icon-money
+                  Invoice
+      #content
+        #content-header
+          %h1 Blank Page
+        #content-container
+          = yield
+      %footer#footer
+        %ul.nav.pull-right
+          %li
+            Copyright © 2013,
+            %a{href: "SITE_URL"} Jumpstart Themes
