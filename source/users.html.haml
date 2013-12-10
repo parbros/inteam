@@ -1,4 +1,69 @@
+---
+title: Usuarios
+name: directorio
+---
 #content-header
   %h1  Usuarios
 #content-container
-  = link_to image_tag('users.png'), 'user_show.html'
+  %table.table.table-striped.table-bordered.table-hover
+    %thead
+      %tr
+        %td
+          C
+    %tbody
+      %tr
+        %td.row
+          .col-lg-1
+            = image_tag 'mc-avatar.png', class: 'thumb-avatar'
+          .col-lg-9
+            .username
+              %i.fa.fa-circle.offline
+              Castilla, Miguel
+            .user-information
+              Cumpleaños: Jun 19
+          .col-lg-2
+            = link_to 'Ver perfil', '/directorio/usuarios/miguel-castilla'
+            %br
+            = link_to 'Enviar mensaje', 'user_show.html'
+
+  %table.table.table-striped.table-bordered.table-hover
+    %thead
+      %tr
+        %td
+          M
+    %tbody
+      %tr
+        %td.row
+          .col-lg-1
+            = image_tag 'dm-avatar.png', class: 'thumb-avatar'
+          .col-lg-9
+            .username
+              %i.fa.fa-circle.online
+              Madrigal, David
+            .user-information
+              Cumpleaños: Ene 19
+          .col-lg-2
+            = link_to 'Ver perfil', '/directorio/usuarios/david-madrigal'
+            %br
+            = link_to 'Enviar mensaje', 'user_show.html'
+
+  %table.table.table-striped.table-bordered.table-hover
+    %thead
+      %tr
+        %td
+          R
+    %tbody
+      %tr
+        %td.row
+          .col-lg-1
+            = image_tag 'vr-avatar.png', class: 'thumb-avatar'
+          .col-lg-9
+            .username
+              %i.fa.fa-circle.online
+              Rojas, Victor
+            .user-information
+              Cumpleaños: Feb 8
+          .col-lg-2
+            = link_to 'Ver perfil', '/directorio/usuarios/victor-rojas'
+            %br
+            = link_to 'Enviar mensaje', 'user_show.html'          

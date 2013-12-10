@@ -4,7 +4,7 @@
     %meta{charset: "utf-8"}
     
     %title
-      = current_page.data.title || "The Middleman"
+      = "CanvasApp - #{current_page.data.title || 'Collaboration System'}"
     
     %link{href: "http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,800italic,400,600,800", rel: "stylesheet", type: "text/css"}/
     = stylesheet_link_tag "all"
@@ -26,33 +26,40 @@
             %i.icon-search
       %nav#sidebar
         %ul#main-nav.open-active
-          %li
-            %a{href: "./index.html"}
+          %li{class: "#{"active open" if current_page.data.name == 'dashboard'}"}
+            %a{href: "/dashboard"}
               %i.fa.fa-dashboard
               Dashboard
-          %li.dropdown
-            %a{href: "javascript:;"}
-              %i.icon-file-text
+          %li.dropdown{class: "#{"active open" if current_page.data.name == 'directorio'}"}
+            %a{href: "#"}
+              %i.fa.fa-book
               Directorio
               %span.caret
             %ul.sub-nav.icons-list
               %li
-                %a{href: "./users.html"}
-                  %i.icon-li.icon-user
+                %a{href: "/directorio/usuarios"}
+                  %i.fa.fa-user
                   Usuarios
               %li
-                %a{href: "./grupos.html"}
-                  %i.icon-money
+                %a{href: "/directorio/grupos"}
+                  %i.fa.fa-group
                   Grupos
-          %li
-            %a{href: './calendario.html'}
+          %li{class: "#{"active open" if current_page.data.name == 'calendario'}"}
+            %a{href: '/calendario'}
+              %i.fa.fa-calendar
               Calendario
-          %li
-            %a{href: './tasks.html'}
-              Administrador de Tickets
-          %li
-            %a{href: './archiveros.html'}
-              Administrador de Archivos
+          %li{class: "#{"active open" if current_page.data.name == 'tasks'}"}
+            %a{href: '/tasks'}
+              %i.fa.fa-ticket
+              Tickets
+          %li{class: "#{"active open" if current_page.data.name == 'archiveros'}"}
+            %a{href: '/archivero'}
+              %i.fa.fa-files-o
+              Archivos
+          %li{class: "#{"active open" if current_page.data.name == 'mensajes'}"}
+            %a{href: '/mensajes'}
+              %i.fa.fa-comments
+              Mensajes
 
       #content
         = yield
@@ -60,4 +67,4 @@
         %ul.nav.pull-right
           %li
             Copyright © 2013,
-            %a{href: "SITE_URL"} Jumpstart Themes
+            %a{href: "http://www.parbros.com", target: '_blank'} ParBros Labs

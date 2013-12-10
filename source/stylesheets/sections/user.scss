@@ -1,0 +1,32 @@
+img.thumb-avatar {
+  width: 50px;
+}
+
+i.offline {
+  color: #888888;
+  font-size: 12px;
+}
+
+i.online {
+  color: #5cb85c;
+  font-size: 12px;
+}
+
+.username {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.round-avatar {
+  width: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+}
+
+.small-round-avatar {
+  width: 30px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+}

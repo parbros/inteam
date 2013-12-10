@@ -2,5 +2,16 @@
 *= require 'bootstrap'
 *= require 'App'
 *= require 'font-awesome.min'
+*= require 'fullcalendar'
+*= require 'bootstrap-fileupload.min'
+*= require_tree './sections'
 */
 @charset "utf-8";
+
+p.you-message {
+  background-color: #eee;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding: 10px;
+}

@@ -29,11 +29,24 @@ page "/index.html", :layout => false
 # Proxy pages (http://middlemanapp.com/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
+proxy "/dashboard", "/dashboard.html"
+proxy "/directorio/usuarios", "/users.html"
+proxy "/directorio/grupos", "/grupos.html"
+["david-madrigal", "miguel-castilla", "victor-rojas"].each do |name|
+  proxy "/directorio/usuarios/#{name}", "/user_show.html", locals: { :person_name => name }
+end
+proxy "/calendario", "/calendario.html"
+proxy "/tasks", "/tasks.html"
+proxy "/archivero", "/archiveros.html"
+['12345','12346','12347'].each do |ticket|
+  proxy "/tasks/#{ticket}", "/task_show.html", locals: { :task_id => ticket }
+end
+proxy "/mensajes", "/mensajes.html"
+
 
 ###
 # Helpers
 ###
-
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 

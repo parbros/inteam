@@ -1,4 +1,11 @@
+---
+title: Usario
+name: directorio
+---
+- user = UsersHelpers::USERS[person_name]
 #content-header
-  %h1  David m
+  %h1= user[:name]
 #content-container
+  %table.table.table-striped.table-bordered.table-hover
+    
   = image_tag('user.png')

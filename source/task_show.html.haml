@@ -1,4 +1,58 @@
+---
+title: Ticket
+name: tasks
+---
+- task = TasksHelpers::TASKS[task_id]
+
 #content-header
   %h1  Ticket
 #content-container
-  = link_to image_tag('task_show.png'), 'task_show.html'
+  %h3
+    = "##{task_id} #{task[:title]}"
+    %small.pull-right= task[:created_at]
+  %hr
+  
+  %p= task[:description]
+  
+  .well.row
+    .col-lg-1
+      = image_tag 'dm-avatar.png', class: 'round-avatar'
+    .col-lg-11
+      %textarea#count-textarea1.form-control{rows: "3"}
+    .col-lg-12
+      .fileupload.fileupload-new{"data-provides" => "fileupload"}
+        %span.btn.btn-default.btn-file
+          %span.fileupload-new Select file
+          %span.fileupload-exists Change
+          %input{type: "file"}/
+        %span.fileupload-preview
+        %button.close.fileupload-exists{"data-dismiss" => "fileupload", style: "float:none", type: "button"} ×
+    .col-lg-12
+      %label
+        %input{type: 'checkbox'}
+        Cerrar al responder.
+    .col-lg-12
+      %label
+        %input{type: 'checkbox'}
+        Marcar como 'Esperando Respuesta' al responder.
+    .col-lg-12
+      %input.btn.btn-success.pull-right{type: 'button', value: 'Publicar'}
+  
+  %h3 Comentarios
+  %table.table.table-striped
+    %tbody
+      %tr
+        %td 03 Dic 12:35 PM
+        %td
+          %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+        %td= link_to task[:author][:name], "/directorio/usuarios/#{task[:author][:slug]}"
+      %tr
+        %td 03 Dic 12:35 PM
+        %td
+          %p Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        %td= link_to task[:author][:name], "/directorio/usuarios/#{task[:author][:slug]}"
+      %tr
+        %td 03 Dic 12:35 PM
+        %td
+          %p Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        %td= link_to 'Miguel Castilla', '/directorio/usuarios/miguel-castilla'

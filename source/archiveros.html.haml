@@ -1,4 +1,354 @@
+---
+title: Archivero
+name: archiveros
+---
+
 #content-header
   %h1  Administrador de Archivos
 #content-container
-  = link_to image_tag('archivos.png'), 'show_archivo.html'
+  .portlet
+    .portlet-header
+      %h3
+        %i.fa.fa-files-o
+        Archivos
+      %ul.portlet-tools.pull-right
+        %li
+          %ul.nav.nav-pills
+            %li.active
+              %a{"data-toggle" => "tab", href: "#tab1"} Oficiales
+            %li
+              %a{"data-toggle" => "tab", href: "#tab2"} En grupos
+            %li
+              %a{"data-toggle" => "tab", href: "#tab3"} Creados por ti
+        %li
+          = link_to "/archivero/nuevo", class: 'btn btn-success' do
+            %i.fa.fa-plus
+            Nuevo Archivo
+
+    .portlet-content
+      .tab-content
+        #tab1.tab-pane.fade.active.in
+          %table.table.table-striped.table-bordered.media-table.table-hover
+            %thead
+              %tr
+                %th Nombre
+                %th Autor
+                %th Modificacion
+                %th Informacion
+                %th.text-center Acciones
+            %tbody
+              %tr
+                %td
+                  %a{href: "javascript:;", title: ""} Donec quam felis
+                  %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                %td= link_to 'Victor Rojas', '/directorio/usuarios/victor-rojas'
+                %td Feb 12, 2012. 12:28
+                %td.file-info
+                  %span
+                    %strong Size:
+                    215 Kb
+                  %br/
+                  %span
+                    %strong Format:
+                    \.jpg
+                  %br/
+                  %span
+                    %strong Dimensions:
+                    120 x 120
+                %td.text-center
+                  %button.btn.btn-xs.btn-primary
+                    %i.fa.fa-pencil
+                  \ 
+                  %button.btn.btn-xs.btn-secondary
+                    %i.fa.fa-times
+              %tr
+                %td
+                  %a{href: "javascript:;", title: ""} Donec quam felis
+                  %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                %td= link_to 'Victor Rojas', '/directorio/usuarios/victor-rojas'
+                %td Feb 12, 2012. 12:28
+                %td.file-info
+                  %span
+                    %strong Size:
+                    215 Kb
+                  %br/
+                  %span
+                    %strong Format:
+                    \.jpg
+                  %br/
+                  %span
+                    %strong Dimensions:
+                    120 x 120
+                %td.text-center
+                  %button.btn.btn-xs.btn-primary
+                    %i.fa.fa-pencil
+                  \ 
+                  %button.btn.btn-xs.btn-secondary
+                    %i.fa.fa-times
+              %tr
+                %td
+                  %a{href: "javascript:;", title: ""} Donec quam felis
+                  %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                %td= link_to 'David Madrigal', '/directorio/usuarios/david-madrigal'
+                %td Feb 12, 2012. 12:28
+                %td.file-info
+                  %span
+                    %strong Size:
+                    215 Kb
+                  %br/
+                  %span
+                    %strong Format:
+                    \.jpg
+                  %br/
+                  %span
+                    %strong Dimensions:
+                    120 x 120
+                %td.text-center
+                  %button.btn.btn-xs.btn-primary
+                    %i.fa.fa-pencil
+                  \ 
+                  %button.btn.btn-xs.btn-secondary
+                    %i.fa.fa-times
+              %tr
+                %td
+                  %a{href: "javascript:;", title: ""} Donec quam felis
+                  %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                %td= link_to 'Miguel Castilla', '/directorio/usuarios/miguel-castilla'
+                %td Feb 12, 2012. 12:28
+                %td.file-info
+                  %span
+                    %strong Size:
+                    215 Kb
+                  %br/
+                  %span
+                    %strong Format:
+                    \.jpg
+                  %br/
+                  %span
+                    %strong Dimensions:
+                    120 x 120
+                %td.text-center
+                  %button.btn.btn-xs.btn-primary
+                    %i.fa.fa-pencil
+                  \ 
+                  %button.btn.btn-xs.btn-secondary
+                    %i.fa.fa-times
+
+        #tab2.tab-pane.fade
+          %table.table.table-striped.table-bordered.media-table.table-hover
+            %thead
+              %tr
+                %th Nombre
+                %th Autor
+                %th Grupo
+                %th Modificacion
+                %th Informacion
+                %th.text-center Acciones
+            %tbody
+              %tr
+                %td
+                  %a{href: "javascript:;", title: ""} Donec quam felis
+                  %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                %td= link_to 'David Madrigal', '/directorio/usuarios/david-madrigal'
+                %td Party Book
+                %td Feb 12, 2012. 12:28
+                %td.file-info
+                  %span
+                    %strong Size:
+                    215 Kb
+                  %br/
+                  %span
+                    %strong Format:
+                    \.jpg
+                  %br/
+                  %span
+                    %strong Dimensions:
+                    120 x 120
+                %td.text-center
+                  %button.btn.btn-xs.btn-primary
+                    %i.fa.fa-pencil
+                  \ 
+                  %button.btn.btn-xs.btn-secondary
+                    %i.fa.fa-times
+              %tr
+                %td
+                  %a{href: "javascript:;", title: ""} Donec quam felis
+                  %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                %td= link_to 'Victor Rojas', '/directorio/usuarios/victor-rojas'
+                %td Party Book
+                %td Feb 12, 2012. 12:28
+                %td.file-info
+                  %span
+                    %strong Size:
+                    215 Kb
+                  %br/
+                  %span
+                    %strong Format:
+                    \.jpg
+                  %br/
+                  %span
+                    %strong Dimensions:
+                    120 x 120
+                %td.text-center
+                  %button.btn.btn-xs.btn-primary
+                    %i.fa.fa-pencil
+                  \ 
+                  %button.btn.btn-xs.btn-secondary
+                    %i.fa.fa-times
+              %tr
+                %td
+                  %a{href: "javascript:;", title: ""} Donec quam felis
+                  %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                %td= link_to 'Miguel Castilla', '/directorio/usuarios/miguel-castilla'
+                %td 131 Voces
+                %td Feb 12, 2012. 12:28
+                %td.file-info
+                  %span
+                    %strong Size:
+                    215 Kb
+                  %br/
+                  %span
+                    %strong Format:
+                    \.jpg
+                  %br/
+                  %span
+                    %strong Dimensions:
+                    120 x 120
+                %td.text-center
+                  %button.btn.btn-xs.btn-primary
+                    %i.fa.fa-pencil
+                  \ 
+                  %button.btn.btn-xs.btn-secondary
+                    %i.fa.fa-times
+              %tr
+                %td
+                  %a{href: "javascript:;", title: ""} Donec quam felis
+                  %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                %td= link_to 'David Madrigal', '/directorio/usuarios/david-madrigal'
+                %td 131 Voces
+                %td Feb 12, 2012. 12:28
+                %td.file-info
+                  %span
+                    %strong Size:
+                    215 Kb
+                  %br/
+                  %span
+                    %strong Format:
+                    \.jpg
+                  %br/
+                  %span
+                    %strong Dimensions:
+                    120 x 120
+                %td.text-center
+                  %button.btn.btn-xs.btn-primary
+                    %i.fa.fa-pencil
+                  \ 
+                  %button.btn.btn-xs.btn-secondary
+                    %i.fa.fa-times
+          
+        #tab3.tab-pane.fade
+          %table.table.table-striped.table-bordered.media-table.table-hover
+            %thead
+              %tr
+                %th Nombre
+                %th Autor
+                %th Modificacion
+                %th Informacion
+                %th.text-center Acciones
+            %tbody
+              %tr
+                %td
+                  %a{href: "javascript:;", title: ""} Donec quam felis
+                  %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                %td= link_to 'David Madrigal', '/directorio/usuarios/david-madrigal'
+                %td Feb 12, 2012. 12:28
+                %td.file-info
+                  %span
+                    %strong Size:
+                    215 Kb
+                  %br/
+                  %span
+                    %strong Format:
+                    \.jpg
+                  %br/
+                  %span
+                    %strong Dimensions:
+                    120 x 120
+                %td.text-center
+                  %button.btn.btn-xs.btn-primary
+                    %i.fa.fa-pencil
+                  \ 
+                  %button.btn.btn-xs.btn-secondary
+                    %i.fa.fa-times
+              %tr
+                %td
+                  %a{href: "javascript:;", title: ""} Donec quam felis
+                  %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                %td= link_to 'David Madrigal', '/directorio/usuarios/david-madrigal'
+                %td Feb 12, 2012. 12:28
+                %td.file-info
+                  %span
+                    %strong Size:
+                    215 Kb
+                  %br/
+                  %span
+                    %strong Format:
+                    \.jpg
+                  %br/
+                  %span
+                    %strong Dimensions:
+                    120 x 120
+                %td.text-center
+                  %button.btn.btn-xs.btn-primary
+                    %i.fa.fa-pencil
+                  \ 
+                  %button.btn.btn-xs.btn-secondary
+                    %i.fa.fa-times
+              %tr
+                %td
+                  %a{href: "javascript:;", title: ""} Donec quam felis
+                  %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                %td= link_to 'David Madrigal', '/directorio/usuarios/david-madrigal'
+                %td Feb 12, 2012. 12:28
+                %td.file-info
+                  %span
+                    %strong Size:
+                    215 Kb
+                  %br/
+                  %span
+                    %strong Format:
+                    \.jpg
+                  %br/
+                  %span
+                    %strong Dimensions:
+                    120 x 120
+                %td.text-center
+                  %button.btn.btn-xs.btn-primary
+                    %i.fa.fa-pencil
+                  \ 
+                  %button.btn.btn-xs.btn-secondary
+                    %i.fa.fa-times
+              %tr
+                %td
+                  %a{href: "javascript:;", title: ""} Donec quam felis
+                  %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                %td= link_to 'David Madrigal', '/directorio/usuarios/david-madrigal'
+                %td Feb 12, 2012. 12:28
+                %td.file-info
+                  %span
+                    %strong Size:
+                    215 Kb
+                  %br/
+                  %span
+                    %strong Format:
+                    \.jpg
+                  %br/
+                  %span
+                    %strong Dimensions:
+                    120 x 120
+                %td.text-center
+                  %button.btn.btn-xs.btn-primary
+                    %i.fa.fa-pencil
+                  \ 
+                  %button.btn.btn-xs.btn-secondary
+                    %i.fa.fa-times

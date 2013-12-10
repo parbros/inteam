@@ -1,4 +1,34 @@
+---
+title: Calendario
+name: calendario
+---
+
 #content-header
   %h1  Calendario
 #content-container
-  = image_tag('calendario.png')
+  .row
+    .col-md-8
+      #full-calendar
+
+    .col-md-4
+      .well
+        #external-events
+          %h4 Agregar un evento
+          %form#event-form.form
+            .form-group
+              %input#event_title.form-control{placeholder: "Titulo del evento...", type: "text", value: ""}/
+            .form-group
+              %select#event_category.form-control{name: "event_category"}
+                %option{value: "fc-red"} Evento rojo
+                %option{value: "fc-yellow"} Evento Amarillo
+                %option{value: "fc-grey"} Evento gris
+                %option{value: "fc-charcoal"} Evento negro
+            .form-group
+              %button#event_add.btn.btn-tertiary.btn-sm{type: "submit"} Agregar Evento
+          %hr/
+          %h4 Draggable Events
+          #event_box
+            .external-event.label.ui-draggable.fc-red{"data-category" => "fc-red", style: "position: relative;"} Mi Evento 1
+            .external-event.label.ui-draggable.fc-yellow{"data-category" => "fc-yellow", style: "position: relative;"} Mi Evento 2
+            .external-event.label.ui-draggable.fc-grey{"data-category" => "fc-grey", style: "position: relative;"} Mi Evento 3
+            .external-event.label.ui-draggable.fc-charcoal{"data-category" => "fc-charcoal", style: "position: relative;"} Mi Evento 4

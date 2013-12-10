@@ -1,4 +1,57 @@
+---
+title: Tickets
+name: tasks
+---
+
 #content-header
   %h1  Administrador de Tickets
 #content-container
-  = link_to image_tag('tasks.png'), 'task_show.html'
+  .portlet
+    .portlet-header
+      %h3 Atendiendo
+      %ul.portlet-tools.pull-right
+        %li
+          %span.badge.badge-primary 2
+    .portlet-content
+      %table.table.table-hover.table-striped
+        %thead
+          %tr
+            %th !
+            %th Asunto
+            %th Autor
+            %th Ultima respuesta
+        %tbody
+          %tr
+            %td
+              %span.label.label-danger Alta
+            %td= link_to '#12345 Lorem ipsum dolor sit amet.', '/tasks/12345'
+            %td= link_to 'Victor Rojas', '/directorio/usuarios/victor-rojas'
+            %td 07:35 PM
+          %tr
+            %td
+              %span.label.label-info Baja
+            %td= link_to '#12346 Nullam id dolor id nibh ultricies vehicula ut id elit.', '/tasks/12346'
+            %td= link_to 'Miguel Castilla', '/directorio/usuarios/miguel-castilla'
+            %td 07 Dic 05:54 PM
+
+  .portlet
+    .portlet-header
+      %h3 Pendientes
+      %ul.portlet-tools.pull-right
+        %li
+          %span.badge.badge-primary 1
+    .portlet-content
+      %table.table.table-hover.table-striped
+        %thead
+          %tr
+            %th !
+            %th Asunto
+            %th Autor
+            %th Ultima respuesta
+        %tbody
+          %tr
+            %td
+              %span.label.label-warning Media
+            %td= link_to '#12347 Donec ullamcorper nulla non metus auctor fringilla.','/tasks/12347'
+            %td= link_to 'Victor Rojas', '/directorio/usuarios/victor-rojas'
+            %td N/A
