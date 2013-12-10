@@ -33,23 +33,33 @@
           %li.dropdown
             %a{href: "javascript:;"}
               %i.icon-file-text
-              Example Pages
+              Directorio
               %span.caret
-            %ul.sub-nav
+            %ul.sub-nav.icons-list
               %li
-                %a{href: "./page-profile.html"}
-                  %i.icon-user
-                  Profile
+                %a{href: "./users.html"}
+                  %i.icon-li.icon-user
+                  Usuarios
               %li
-                %a{href: "./page-invoice.html"}
+                %a{href: "./grupos.html"}
                   %i.icon-money
-                  Invoice
+                  Grupos
+          %li
+            %a{href: './calendario.html'}
+              Calendario
+          %li
+            %a{href: './tasks.html'}
+              Administrador de Tickets
+          %li
+            %a{href: './archiveros.html'}
+              Administrador de Archivos
+          %li
+            %a{href: './blogs.html'}
+              Blog
+
 
       #content
-        #content-header
-          %h1 Blank Page
-        #content-container
-          = yield
+        = yield
       %footer#footer
         %ul.nav.pull-right
           %li
