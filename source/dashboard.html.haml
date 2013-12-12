@@ -1,10 +1,300 @@
 ---
-title: Welcome to CanvasApp
+title: Welcome to roonyx
 name: 'dashboard'
 ---
 
-.welcome
-  %h1
-    Middleman is Watching
-  %p.doc
-    = link_to "Read Online Documentation", "http://middlemanapp.com/"
+#content-header
+  %h1 Dashboard
+/ #content-header
+#content-container
+  %div
+    %h4.heading-inline
+      Reporte Semanal
+      \  
+      %small Jun 15 - Jun 22, 2011
+      \  
+    .btn-group
+      %button.btn.btn-default.btn-sm.dropdown-toggle{"data-toggle" => "dropdown", type: "button"}
+        %i.fa.fa-clock-o
+        \ 
+        Seleccionar Semana
+        %span.caret
+      %ul.dropdown-menu{role: "menu"}
+        %li
+          %a{href: "javascript:;"} Action
+        %li
+          %a{href: "javascript:;"} Another action
+        %li
+          %a{href: "javascript:;"} Something else here
+        %li.divider
+        %li
+          %a{href: "javascript:;"} Separated link
+  %br/
+  .row
+    .col-md-3.col-sm-6
+      %a.dashboard-stat.primary{href: "javascript:;"}
+        .visual
+          %i.fa.fa-star
+        / /.visual
+        .details
+          %span.content Nuevos Tickets
+          %span.value 1,236
+        / /.details
+        %i.fa.fa-play-circle.more
+      / /.dashboard-stat
+    / /.col-md-3
+    .col-md-3.col-sm-6
+      %a.dashboard-stat.secondary{href: "javascript:;"}
+        .visual
+          %i.fa.fa-shopping-cart
+        / /.visual
+        .details
+          %span.content Tickets Terminados
+          %span.value 256
+        / /.details
+        %i.fa.fa-play-circle.more
+      / /.dashboard-stat
+    / /.col-md-3
+  
+  / /.row
+  .row
+    .col-md-9
+      .portlet
+        .portlet-header
+          %h3
+            %i.fa.fa-bar-chart-o
+            Area Chart
+        / /.portlet-header
+        .portlet-content
+          .pull-left
+            .btn-group{"data-toggle" => "buttons"}
+              %label.btn.btn-sm.btn-default
+                %input#option1{name: "options", type: "radio"}/
+                Day
+              %label.btn.btn-sm.btn-default
+                %input#option2{name: "options", type: "radio"}/
+                Week
+              %label.btn.btn-sm.btn-default.active
+                %input#option3{name: "options", type: "radio"}/
+                Month
+            \ 
+            .btn-group
+              %button.btn.btn-sm.btn-default.dropdown-toggle{"data-toggle" => "dropdown", type: "button"}
+                Custom Date
+                %span.caret
+              %ul.dropdown-menu
+                %li
+                  %a{href: "javascript:;"} Dropdown link
+                %li
+                  %a{href: "javascript:;"} Dropdown link
+          .pull-right
+            .btn-group
+              %button.btn.btn-sm.btn-default.dropdown-toggle{"data-toggle" => "dropdown", type: "button"}
+                %i.fa.fa-cog
+                \  
+                %span.caret
+              %ul.dropdown-menu.pull-right{role: "menu"}
+                %li
+                  %a{href: "javascript:;"} Action
+                %li
+                  %a{href: "javascript:;"} Another action
+                %li
+                  %a{href: "javascript:;"} Something else here
+                %li.divider
+                %li
+                  %a{href: "javascript:;"} Separated link
+          .clear
+          %hr/
+          = partial('data')
+          / /#bar-chart
+        / /.portlet-content
+      / /.portlet
+      .row
+        .col-md-6
+          .portlet
+            .portlet-header
+              %h3
+                %i.fa.fa-money
+                Tickets Terminados
+              %ul.portlet-tools.pull-right
+                %li
+                  %button.btn.btn-sm.btn-default
+                    Agrega una tarea
+            / /.portlet-header
+            .portlet-content
+              .table-responsive
+                %table.table
+                  %thead
+                    %tr
+                      %th Fecha
+                      %th Tarea
+                      
+                      %th
+                  %tbody
+                    %tr
+                      %td 09/21/2013
+                      %td 3
+                      
+                      %td
+                        %a.btn.btn-xs.btn-tertiary{href: "javascript:;"}
+                          View   
+                          %i.fa.fa-chevron-right
+                    %tr
+                      %td 09/21/2013
+                      %td 1
+                      
+                      %td
+                        %a.btn.btn-xs.btn-tertiary{href: "javascript:;"}
+                          View   
+                          %i.fa.fa-chevron-right
+                    %tr
+                      %td 09/20/2013
+                      %td 2
+                      
+                      %td
+                        %a.btn.btn-xs.btn-tertiary{href: "javascript:;"}
+                          View   
+                          %i.fa.fa-chevron-right
+                    %tr
+                      %td 09/19/2013
+                      %td 4
+                      
+                      %td
+                        %a.btn.btn-xs.btn-tertiary{href: "javascript:;"}
+                          View   
+                          %i.fa.fa-chevron-right
+                    %tr
+                      %td 09/19/2013
+                      %td 4
+                      
+                      %td
+                        %a.btn.btn-xs.btn-tertiary{href: "javascript:;"}
+                          View   
+                          %i.fa.fa-chevron-right
+                    %tr
+                      %td 09/19/2013
+                      %td 4
+                      
+                      %td
+                        %a.btn.btn-xs.btn-tertiary{href: "javascript:;"}
+                          View   
+                          %i.fa.fa-chevron-right
+              / /.table-responsive
+              %hr/
+              %a.btn.btn-sm.btn-secondary{href: "javascript:;"} Todas las Tareas
+            / /.portlet-content
+          / /.portlet
+        / /.col-md-4
+        .col-md-6
+          .portlet
+            .portlet-header
+              %h3
+                %i.fa.fa-group
+                Proyectos Recienes
+              %ul.portlet-tools.pull-right
+                %li
+                  %button.btn.btn-sm.btn-default
+                    Agregar Project
+            / /.portlet-header
+            .portlet-content
+              .table-responsive
+                %table#user-signups.table.table-striped.table-checkable
+                  %thead
+                    %tr
+                      %th.checkbox-column
+                        %input#check-all.icheck-input{type: "checkbox"}/
+                      %th.hidden-xs
+                        Nombre
+                      %th Apellido
+                      %th
+                        Status
+                      %th.align-center
+                        
+                  %tbody
+                    %tr
+                      %td.checkbox-column
+                        %input.icheck-input{name: "actiony", type: "checkbox", value: "joey"}/
+                      %td.hidden-xs Victor
+                      %td Rojas
+                      %td
+                        %span.label.label-success Aprovado
+                      %td.align-center
+                        %a.btn.btn-xs.btn-primary{"data-original-title" => "Approve", href: "javascript:void(0);"}
+                          %i.fa.fa-check
+                    %tr
+                      %td.checkbox-column
+                        %input.icheck-input{name: "actiony", type: "checkbox", value: "wolf"}/
+                      %td.hidden-xs David
+                      %td Maadrigal	
+                      %td
+                        %span.label.label-default Pendiente
+                      %td.align-center
+                        %a.btn.btn-xs.btn-primary{"data-original-title" => "Approve", href: "javascript:void(0);"}
+                          %i.fa.fa-check
+                    %tr
+                      %td.checkbox-column
+                        %input.icheck-input{name: "actiony", type: "checkbox", value: "sam"}/
+                      %td.hidden-xs Miguel
+                      %td Castilla
+                      %td
+                        %span.label.label-success Aprovado
+                      %td.align-center
+                        %a.btn.btn-xs.btn-primary{"data-original-title" => "Approve", href: "javascript:void(0);"}
+                          %i.fa.fa-check
+                    %tr
+                      %td.checkbox-column
+                        %input.icheck-input{name: "actiony", type: "checkbox", value: "carlos"}/
+                      %td.hidden-xs Jorge
+                      %td Pardiñas
+                      %td
+                        %span.label.label-success Aprovado
+                      %td.align-center
+                        %a.btn.btn-xs.btn-primary{"data-original-title" => "Approve", href: "javascript:void(0);"}
+                          %i.fa.fa-check
+                    %tr
+                      %td.checkbox-column
+                        %input.icheck-input{name: "actiony", type: "checkbox", value: "rob"}/
+                      %td.hidden-xs Rob
+                      %td Johnson
+                      %td
+                        %span.label.label-default Pendiente
+                      %td.align-center
+                        %a.btn.btn-xs.btn-primary{"data-original-title" => "Approve", href: "javascript:void(0);"}
+                          %i.fa.fa-check
+                    %tr
+                      %td.checkbox-column
+                        %input.icheck-input{name: "actiony", type: "checkbox", value: "mike"}/
+                      %td.hidden-xs Mike
+                      %td Jones
+                      %td
+                        %span.label.label-default Pendiente
+                      %td.align-center
+                        %a.btn.btn-xs.btn-primary{"data-original-title" => "Approve", href: "javascript:void(0);"}
+                          %i.fa.fa-check
+              / /.table-responsive
+              %hr/
+              Seleccionar Accion:   
+              %select#apply-selected.ui-select2{name: "table-select", style: "width: 125px"}
+                %option{value: ""} Select Action
+                %option{value: "approve"} Approve
+                %option{value: "edit"} Edit
+                %option{value: "delete"} Delete
+            / /.portlet-content
+          / /.portlet
+        / /.col-md-4
+      / /.row
+      .portlet
+        .portlet-header
+          %h3
+            %i.fa.fa-calendar
+            Full Calendar
+        / /.portlet-header
+        .portlet-content
+          #full-calendar
+        / /.portlet-content
+      / /.portlet
+    / /.col-md-9
+    .col-md-3
+    / /.col
+  / /.row
+/ /#content-container

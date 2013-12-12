@@ -32,6 +32,7 @@ page "/index.html", :layout => false
 proxy "/dashboard", "/dashboard.html"
 proxy "/directorio/usuarios", "/users.html"
 proxy "/directorio/grupos", "/grupos.html"
+proxy "/directorio/show_grupo", "/show_grupo.html"
 ["david-madrigal", "miguel-castilla", "victor-rojas"].each do |name|
   proxy "/directorio/usuarios/#{name}", "/user_show.html", locals: { :person_name => name }
 end
